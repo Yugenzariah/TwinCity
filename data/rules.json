@@ -1,0 +1,13 @@
+{
+  "zone": "Residential Zone",
+  "maxHeightM": 7.5,
+  "minSetbackM": 3.0,
+  "maxSiteCoveragePct": 40,
+  "citations": [
+    {
+      "title": "Nelson District Plan - Residential Zone",
+      "section": "Height, Yards, and Site Coverage",
+      "url": "https://www.nelson.govt.nz/environment/nelson-plan"
+    }
+  ]
+}
