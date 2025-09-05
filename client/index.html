@@ -4,21 +4,50 @@
     <meta charset="utf-8" />
     <title>TwinCity - Map</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
   </head>
 
-  
   <body>
-      <header>
-          <h1>Nelson Digital Twin Map</h1>
-        </header>
-        
-        <main>
-            <div id="map"></div>
-            <div id="status">Loading parcel…</div>
-        </main>
-        
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-        <script src="main.js"></script>
+    <header>
+      <h1>Nelson Digital Twin Map</h1>
+    </header>
+
+    <main>
+      <div id="map"></div>
+
+      <section id="panel">
+        <h2>Scenario</h2>
+
+        <div class="row">
+          <label>Height (m)</label>
+          <input id="height" type="number" step="0.1" value="6.8" />
+        </div>
+
+        <div class="row">
+          <label>Footprint (m²)</label>
+          <input id="footprint" type="number" step="1" value="120" />
+        </div>
+
+        <div class="row">
+          <label>Min setback (m)</label>
+          <input id="setback" type="number" step="0.1" value="3.2" />
+        </div>
+
+        <button id="check">Check compliance</button>
+
+        <div id="rulesBox"></div>
+        <pre id="result"></pre>
+      </section>
+
+      <div id="status">
+        Parcel loaded. Next: add inputs & POST to /api/scenarios.
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

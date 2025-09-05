@@ -45,3 +45,23 @@ main {
 .leaflet-container {
     background: #e9eef6;
 }
+
+#panel {
+  background: var(--panel);
+  color: var(--text);
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  display: grid;
+  gap: 10px;
+}
+#panel .row { display: grid; grid-template-columns: 180px 1fr; gap: 8px; align-items: center; }
+#panel input { padding: 8px; border: 1px solid #ccc; border-radius: 8px; }
+#panel button {
+  padding: 10px 12px; border: 0; border-radius: 10px; cursor: pointer;
+  background: #0ea5e9; color: white; font-weight: 600;
+}
+#rulesBox { font-size: 0.9rem; color:#444; background:#f3f6fa; border:1px solid #e1e7ef; padding:8px; border-radius:8px; }
+#result { background:#f8fafc; border:1px solid #e2e8f0; padding:10px; border-radius:8px; min-height:3em; }
+.pass { color:#1a7f37; }
+.fail { color:#c41c1c; }
