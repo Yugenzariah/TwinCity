@@ -1,0 +1,32 @@
+[
+  {
+    "zone": "Residential",
+    "section": "Height",
+    "text": "The maximum height of any building in a Residential Zone must not exceed 7.5 metres, except for chimneys and antennae.",
+    "source": "Nelson City Council District Plan - Section 8.3.2"
+  },
+  {
+    "zone": "Residential",
+    "section": "Setback",
+    "text": "All buildings must be set back at least 3 metres from any road boundary and 1.5 metres from side or rear boundaries.",
+    "source": "Nelson City Council District Plan - Section 8.3.3"
+  },
+  {
+    "zone": "Residential",
+    "section": "Site Coverage",
+    "text": "The total area of buildings on any site must not exceed 40 percent of the total site area.",
+    "source": "Nelson City Council District Plan - Section 8.3.4"
+  },
+  {
+    "zone": "Commercial",
+    "section": "Height",
+    "text": "Buildings in the Commercial Zone may be built up to 12 metres in height, provided sunlight access to adjoining Residential properties is not compromised.",
+    "source": "Nelson City Council District Plan - Section 9.2.1"
+  },
+  {
+    "zone": "Commercial",
+    "section": "Setback",
+    "text": "There is no minimum setback requirement in the Commercial Zone unless the site adjoins a Residential Zone, in which case a 3-metre setback applies.",
+    "source": "Nelson City Council District Plan - Section 9.2.2"
+  }
+]
