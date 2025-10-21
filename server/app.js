@@ -8,16 +8,18 @@ import rules from "./routes/rules.js";
 import scenarios from "./routes/scenarios.js";
 import path from "path";
 import { fileURLToPath } from "url";
+import ask from "./routes/ask.js";
 
 dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
+app.use("/api/ask", ask);
 
 app.get("/health", (_,res)=>res.json({ok:true}));
 
-// serve client for convenience
+// Serve client for convenience
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 app.use(express.static(path.join(__dirname, "../client")));
 

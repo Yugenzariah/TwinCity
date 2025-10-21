@@ -2,13 +2,11 @@ import fs from "fs";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import RuleText from "./models/RuleText.js";
-import path from "path";
 import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
-dotenv.config({ path: path.resolve(__dirname, "../.env") });
+dotenv.config();
 
 const uri = process.env.MONGODB_URI;
 console.log("MONGO_URI:", uri);
@@ -38,6 +36,5 @@ for (const r of rules) {
   });
 }
 
-console.log("All fake embeddings generated and stored.");
 await mongoose.disconnect();
 process.exit(0);

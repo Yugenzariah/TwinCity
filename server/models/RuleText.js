@@ -5,7 +5,7 @@ const RuleTextSchema = new mongoose.Schema({
   section: String,
   text: String,
   source: String,
-  embedding: { type: [Number], index: "vector" } // vector index for MongoDB Atlas
+  embedding: { type: [Number], index: "vector" }
 });
 
 export default mongoose.model("RuleText", RuleTextSchema);

@@ -4,7 +4,7 @@ const ScenarioSchema = new mongoose.Schema({
   heightM: Number,
   footprintSqm: Number,
   minSetbackM: Number,
-  buildingGeojson: Object, // used in Phase 5
+  buildingGeojson: Object,
   results: {
     heightOK: Boolean,
     coverageOK: Boolean,

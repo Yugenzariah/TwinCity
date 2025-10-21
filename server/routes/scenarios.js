@@ -9,24 +9,24 @@ const r = Router();
 r.post("/", async (req, res) => {
   const { heightM, footprintSqm, minSetbackM } = req.body;
 
-  // --- Load parcel + rules ---
+  // Load parcel and rules
   const parcel = await Parcel.findOne({});
   const rule = await Rule.findOne({ zone: parcel.zone });
   if (!parcel || !rule) return res.status(404).json({ error: "Parcel or rule missing" });
 
   const parcelGeo = parcel.geojson;
 
-  // --- 1. Geometry prep ---
+  // Geometry prep
   const areaParcel = turf.area(parcelGeo); // m²
 
-  // shrink parcel inward by setback
+  // Shrink parcel inward by setback
   const inner = turf.buffer(parcelGeo, -minSetbackM, { units: "meters" });
   const innerGeom = inner.type === "FeatureCollection" ? inner.features[0] : inner;
 
-  // centroid of inner area
+  // Centroid of inner area
   const centroid = turf.centroid(innerGeom);
 
-  // create a simple square footprint in meters
+  // Creates a simple square footprint in meters
   const side = Math.sqrt(footprintSqm);
   const half = side / 2;
 
@@ -43,7 +43,7 @@ r.post("/", async (req, res) => {
     topLeft.geometry.coordinates
   ]]);
 
-  // --- 2. Geometry-based checks ---
+  // Geometry-based checks
 
   // Check if building is fully within the parcel (setback)
   const setbackOK = turf.booleanWithin(building, innerGeom);
@@ -62,7 +62,7 @@ r.post("/", async (req, res) => {
   if (!coverageOK) notes.push(`Coverage ${coveragePct.toFixed(1)}% > ${rule.maxSiteCoveragePct}%`);
   if (!setbackOK) notes.push(`Building not fully within parcel setback zone`);
 
-  // --- 3. Save scenario ---
+  // --- Save scenario
   const doc = await Scenario.create({
     parcelId: String(parcel._id),
     heightM,

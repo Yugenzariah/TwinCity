@@ -7,7 +7,7 @@ import Parcel from "../models/Parcel.js";
 const r = Router();
 const dataPath = path.resolve("data/parcel.geojson");
 
-// lazy seed on first request
+// Lazy seed on first request
 async function ensureSeed() {
   const count = await Parcel.countDocuments();
   if (count === 0) {
