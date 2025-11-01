@@ -169,14 +169,23 @@ Mobile Version: Build an offline-capable React Native app for on-site inspection
 ### Screenshots
 
 Map interface with loaded parcel
+<img width="2482" height="1178" alt="image" src="https://github.com/user-attachments/assets/6e304e61-7460-433b-8d53-b59f57722809" />
 
 Ghost building overlay drawn using Turf.js
+<img width="1045" height="850" alt="image" src="https://github.com/user-attachments/assets/89d4ee91-fb32-4306-a51e-5711f2c982cc" />
 
 Validation result (FAIL – red overlay)
+<img width="819" height="625" alt="image" src="https://github.com/user-attachments/assets/c7210122-590c-42c4-bfaf-aea770acfab4" />
+<img width="2490" height="496" alt="image" src="https://github.com/user-attachments/assets/4554fda3-6e96-4aeb-8d44-2b746b9256f1" />
 
 Validation result (PASS – green overlay)
+<img width="2494" height="1335" alt="image" src="https://github.com/user-attachments/assets/86666b5c-36ad-41a4-abde-8a3ba7bb1279" />
 
-“Why?” explanation output panel
+“Why?” explanation output panel (Pass)
+<img width="2485" height="301" alt="image" src="https://github.com/user-attachments/assets/9ae78d4b-e632-4674-8f96-b015571ef696" />
+
+“Why?” explanation output panel (Fail)
+<img width="2483" height="544" alt="image" src="https://github.com/user-attachments/assets/ed79f45a-93ae-4104-a230-3e54a99d5ca8" />
 
 ---
 
