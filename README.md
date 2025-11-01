@@ -18,8 +18,8 @@ This project demonstrates how **geospatial analytics**, **automated rule checkin
   - Minimum setback  
   - Maximum site coverage  
 - Real-time visual feedback:
-  - ✅ Green overlay for compliance  
-  - ❌ Red overlay for non-compliance  
+  - Green overlay for compliance  
+  - Red overlay for non-compliance  
 
 ### Geospatial Analysis
 - **Turf.js** used for geometric operations:
